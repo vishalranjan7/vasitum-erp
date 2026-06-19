@@ -4,7 +4,7 @@
   "doctype": "Client Script",
   "dt": "Item",
   "enabled": 1,
-  "modified": "2026-06-18 09:47:18.278460",
+  "modified": "2026-06-18 17:35:37.283470",
   "module": null,
   "name": "Profit calculation in Item",
   "script": "frappe.ui.form.on('Item', {\n    refresh(frm) {\n        calculate_profit(frm);\n    },\n\n    validate(frm) {\n        calculate_profit(frm);\n    }\n});\n\n\nfunction calculate_profit(frm) {\n\n    frappe.call({\n        method: \"frappe.client.get_list\",\n        args: {\n            doctype: \"Item Price\",\n            filters: {\n                item_code: frm.doc.name\n            },\n            fields: [\n                \"price_list\",\n                \"selling\",\n                \"buying\",\n                \"price_list_rate\"\n            ]\n        },\n        callback: function(r) {\n\n            if (!r.message) return;\n\n            let buying_price = 0;\n            let selling_price = 0;\n\n\n            r.message.forEach(row => {\n\n                if (row.selling == 1) {\n                    selling_price = row.price_list_rate;\n                }\n\n                if (row.buying == 1) {\n                    buying_price = row.price_list_rate;\n                }\n\n            });\n\n\n            let profit = selling_price - buying_price;\n\n\n            frm.set_value(\n                \"custom_profit_in_item\",\n                profit\n            );\n\n        }\n    });\n}",
