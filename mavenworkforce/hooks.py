@@ -264,5 +264,12 @@ fixtures = [
     "Custom Field",
     "Print Format",
     "Letter Head",
+    {
+        "dt": "Property Setter",
+        "filters": [
+            ["doc_type", "=", "Customer"],
+            ["field_name", "=", "customer_type"]
+        ]
+    }
 ]
 
