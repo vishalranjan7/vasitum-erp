@@ -263,4 +263,6 @@ fixtures = [
     "Client Script",
     "Custom Field",
     "Print Format",
+    "Letter Head",
 ]
+
