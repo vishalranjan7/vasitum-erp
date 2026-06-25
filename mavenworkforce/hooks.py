@@ -270,6 +270,14 @@ fixtures = [
             ["doc_type", "=", "Customer"],
             ["field_name", "=", "customer_type"]
         ]
+    },
+    {
+        "dt": "Property Setter",
+        "filters": [
+            ["doc_type", "=", "Sales Invoice"],
+            ["field_name", "=", "total_qty"],
+            ["property", "=", "label"]
+        ]
     }
 ]
 
