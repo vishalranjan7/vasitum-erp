@@ -264,6 +264,7 @@ fixtures = [
     "Custom Field",
     "Print Format",
     "Letter Head",
+    "Doctype",
     {
         "dt": "Property Setter",
         "filters": [
@@ -279,13 +280,13 @@ fixtures = [
             ["property", "=", "label"]
         ]
     },
-    {
-        "dt": "Property Setter",
-        "filters": [
-            ["doc_type", "=", "Sales Invoice Item"],
-            ["field_name", "=", "qty"],
-            ["property", "=", "label"]
-        ]
-    }
+    # {
+    #     "dt": "Property Setter",
+    #     "filters": [
+    #         ["doc_type", "=", "Sales Invoice Item"],
+    #         ["field_name", "=", "qty"],
+    #         ["property", "=", "label"]
+    #     ]
+    # }
 ]
 
