@@ -258,12 +258,12 @@ app_license = "mit"
 
 
 
-
 fixtures = [
     "Client Script",
     "Custom Field",
     "Print Format",
     "Letter Head",
+
     {
         "dt": "Property Setter",
         "filters": [
@@ -271,14 +271,25 @@ fixtures = [
             ["field_name", "=", "customer_type"]
         ]
     },
+
     {
         "dt": "Property Setter",
         "filters": [
+            ["doctype_or_field", "=", "DocField"],
             ["doc_type", "=", "Sales Invoice"],
             ["field_name", "=", "total_qty"],
             ["property", "=", "label"]
         ]
     },
-    
+
+    {
+        "dt": "Property Setter",
+        "filters": [
+            ["doctype_or_field", "=", "DocField"],
+            ["doc_type", "=", "Sales Invoice Item"],
+            ["field_name", "=", "qty"],
+            ["property", "=", "label"]
+        ]
+    }
 ]
 
