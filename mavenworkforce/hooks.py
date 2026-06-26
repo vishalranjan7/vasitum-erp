@@ -264,7 +264,6 @@ fixtures = [
     "Custom Field",
     "Print Format",
     "Letter Head",
-    "DocType",
     {
         "dt": "Property Setter",
         "filters": [
@@ -282,3 +281,4 @@ fixtures = [
     },
     
 ]
+
